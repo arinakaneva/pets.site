@@ -1,16 +1,11 @@
 import React from "react";
-import photo1 from '../img/dog.jpg'
-const Slider = () => {
+const Slider = (props) => {
     return (
-        <div>
-            <div className="carousel-item active">
-                <img src={photo1} className="d-block w-100" alt="dog" />
-                <div className="carousel-caption d-none d-md-block">
-                    <h5>Найдена собака</h5>
-                    <p>Собаку нашли в Приморском районе</p>
-                </div>
-            </div>
-        </div>
+            <div className={props.css_class}>  
+            <h2 className='text-center text-danger'>{props.data.kind}</h2>
+            <p className='text-center'>{props.data.description}</p>  
+            <img src={'https://pets.сделай.site'+props.data.image} className="d-block m-auto" alt="photo_pets" style={{height: '200px'}}/>    
+          </div>
     );
 };
 export default Slider;

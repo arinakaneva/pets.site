@@ -1,18 +1,28 @@
-import React from "react";
-import photo2 from '../img/rabbit.jpg'
-const Card = () => {
-    return (
-        <div>
-            <div className="col">
-                <div className="card h-100">
-                    <img src={photo2} className="card-img-top" alt="кролик" />
-                    <div className="card-body">
-                        <h5 className="card-title">Кролик</h5>
-                        <p className="card-text">Нашли кролика в приморском районе.Серый Кролик с розовым бантиком</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+import React from 'react';
+
+const Cards = (props) => {
+    return(
+  <div className="col">
+    <div className="card h-100">
+      <img src={'https://pets.сделай.site'+props.data.photos} className="card-img-top wwww" alt="..."/>
+      <div className="card-body ft">
+          <div>
+        <h5 className="card-title">{props.data.name}</h5>
+        <p className="card-text">id: {props.data.id}</p> 
+        <p className="card-text">Телефон: {props.data.phone}</p> 
+        <p className="card-text">Имя: {props.data.name}</p> 
+        <p className="card-text">Вид: {props.data.kind}</p> 
+        <p className="card-text">Описание: {props.data.description}</p>
+        <p className="card-text">Чип: {props.data.mark}</p>
+        <p className="card-text">Район: {props.data.district}</p>
+        <p className="card-text">Дата: {props.data.date}</p>
+
+      </div>
+        <div><button className="btn btn-danger ff" >Подробнее</button></div>
+      </div>
+    </div>
+  </div>
     );
 };
-export default Card;
+
+export default Cards;
