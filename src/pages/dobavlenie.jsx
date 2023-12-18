@@ -108,7 +108,8 @@ function Dobavlenie() {
                     <button type="submit" className="btn btn-danger">Выложить объявление</button>
                 </div>
             </form>
-            <div className="alert alert-primary w-50 asda mt-3 " style={{ "display": "none" }} role="alert" ref={blocks}></div>
+            <div className="alert alert-primary w-50 asda mt-3  m-auto" style={{ "display": "none" }} role="alert" ref={blocks}></div>
+            <pre></pre>
 
             <Footer />
         </div>
