@@ -60,9 +60,9 @@ const Vxodd = () => {
         <div>
             <Header />
             <h2 className="text-center text-white bg-danger m-2">Вход</h2>
-            <div style={{"minHeight":"70vh"}}>
+            <div style={{ "minHeight": "70vh" }}>
                 <form className="contei1 w-50 m-auto" noValidate onSubmit={sign} id='forma'>
-                    <label htmlFor="validationCustom01" className="form-label">Email</label>
+                    <label htmlFor="validationCustom01" className="form-label">Почта</label>
                     <input type="email" className="form-control" id="validationCustom01" required onChange={(e) => setUser({ ...user, email: e.target.value })} />
                     <div className="invalid-feedback feed">
                         Введите правильный Mail

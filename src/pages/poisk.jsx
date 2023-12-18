@@ -78,7 +78,7 @@ function Poisk() {
                     <div className="row row-cols-1 row-cols-md-3 g-4 w-75 m-auto">
                     {cards.map((item, index) => <Cards data={item} key={index} />)}
                     </div>
-                    <div className="alert alert-primary w-50 asda mt-3 m-auto" style={{ "display": "none" }} role="alert" ref={blocks}></div>
+                    <div className="alert alert-danger w-50 asda mt-3 m-auto" style={{ "display": "none" }} role="alert" ref={blocks}></div>
                     </div>
                     <br/>
             <Footer />
