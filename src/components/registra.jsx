@@ -31,8 +31,8 @@ const RegistrationForm = () => {
             .then(response => response.status)
             .then(result => {
                 console.log(result)
-                if (result === 204) {
-                    let message = 'Регистрация прошла успешно!!!';
+                if (result == 204) {
+                    let message = 'Регистрация прошла успешно!';
                     blocks.current.innerText = message;
                     blocks.current.style.background = "#34C924"
                     blocks.current.style.color = "black";
@@ -41,7 +41,7 @@ const RegistrationForm = () => {
                 }
                 else
                 {
-                    let message = 'Вы ввели неправильный логин или пароль!!!';
+                    let message = 'Вы ввели неправильный логин или пароль!';
                     blocks.current.innerText = message;
                     blocks.current.style.background = '#C76864';
                     blocks.current.style.color = "black";
@@ -84,6 +84,7 @@ const RegistrationForm = () => {
                 </div>
                 <button type="submit" className="btn btn-danger">Зарегистрироваться</button>
             </form>
+            <div className="alert alert-danger w-50 asda m-auto" style={{ "display": "none" }} role="alert" ref={blocks}></div>
         </div>
     );
 };

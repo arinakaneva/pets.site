@@ -4,7 +4,7 @@ const Cards = (props) => {
     return(
   <div className="col">
     <div className="card h-100">
-      <img src={'https://pets.сделай.site'+props.data.photos} className="card-img-top wwww" alt="..."/>
+      <img src={'https://pets.сделай.site'+props.data.photos} className="card-img-top wwww" style={{"height":"450px"}} alt="..."/>
       <div className="card-body ft">
           <div>
         <h5 className="card-title">{props.data.name}</h5>
@@ -16,7 +16,7 @@ const Cards = (props) => {
         <p className="card-text">Чип: {props.data.mark}</p>
         <p className="card-text">Район: {props.data.district}</p>
         <p className="card-text">Дата: {props.data.date}</p>
-
+        <pre></pre>
       </div>
         <div><button className="btn btn-danger ff" >Подробнее</button></div>
       </div>

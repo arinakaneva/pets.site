@@ -38,7 +38,7 @@ const Vxodd = () => {
                 if ('data' in result) {
                     localStorage.token = result.data.token
                     setToken(result.data.token)
-                    let message = 'Регистрация прошла успешно!';
+                    let message = 'Вход прошел успешно!';
                     blocks.current.innerText = message;
                     blocks.current.style.background = "#34C924"
                     blocks.current.style.color = "black";
