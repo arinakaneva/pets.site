@@ -4,6 +4,7 @@ import Vxod from './pages/vxod';
 import Main from './pages/main'
 import Poisk from './pages/poisk';
 import Cabinlich from './pages/cabinlich';
+import InfCard from './pages/infcard';
 import {Routes, Route} from "react-router-dom";
 
 
@@ -17,6 +18,7 @@ function App() {
                 <Route path={'/cabinlich'} element={<Cabinlich/>}/>
                 <Route path={'/dobavlenie'} element={<Dobavlenie/>}/>
                 <Route path={'/poisk'} element={<Poisk/>}/>
+                <Route path={'/infcard'} element={<InfCard/>}/>
             </Routes>
     </div>
   );

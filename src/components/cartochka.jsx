@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Cards = (props) => {
+  const navigate=useNavigate();
     return(
   <div className="col">
     <div className="card h-100">
@@ -18,7 +20,7 @@ const Cards = (props) => {
         <p className="card-text">Дата: {props.data.date}</p>
         <pre></pre>
       </div>
-        <div><button className="btn btn-danger ff" >Подробнее</button></div>
+        <div><button onClick={() => {navigate("/infcard", { state: props.data.id })}} className="btn btn-outline-danger ff m-auto" >Подробнее</button></div>
       </div>
     </div>
   </div>

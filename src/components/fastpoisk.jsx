@@ -1,13 +1,15 @@
-import { useState } from "react";
+import {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { QuickSearchRequest } from "./requests";
 
 let attempts = 0
 
 const QuickSearch = () => {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [card, setCard] = useState({ data: { orders: [] } })
     const navigate = useNavigate();
+
 
     const submitSearch = (e) => {
         e.preventDefault()
@@ -65,3 +67,4 @@ const QuickSearch = () => {
 }
 
 export default QuickSearch;
+
