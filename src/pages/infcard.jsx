@@ -40,7 +40,7 @@ const InfCard = () => {
                 <div className="row row-cols-1 row-cols-md-3 g-4 w-75 m-auto">
                     <div className="col m-auto">
                         <div className="card h-100">
-                            <img src={'https://pets.сделай.site' + card.photos1} className="card-img-top wwww" alt="..." />
+                            <img src={'https://pets.сделай.site' + card.photos1} className="card-img-top wwww" style={{"height":"450px"}} alt="..." />
                             <div className="card-body ft">
                                 <div>
                                     <h5 className="card-title">{card.kind}</h5>
