@@ -53,7 +53,7 @@ function Poisk() {
         <div>
             <Header />
             <h1 className="text-center text-white bg-danger m-1">Поиск</h1>
-                <div style={{"minHeight":"64vh"}}>
+            <div style={{ "minHeight": "64vh" }}>
                 <form noValidate style={{ "margin": "30px auto 0 auto", "minWidth": "300px" }} onSubmit={skai} id='ishi'>
                     <div>
                         <div className="w-50 m-auto " >
@@ -64,23 +64,23 @@ function Poisk() {
                         <pre></pre>
                         <div className="w-50 m-auto " >
                             <form className="d-flex but" role="search">
-                                <input className="form-control me-2" type="text" placeholder="Введите район" aria-label="Search" onChange={(e) => setZap({ ...zap, district: e.target.value })}/>
+                                <input className="form-control me-2" type="text" placeholder="Введите район" aria-label="Search" onChange={(e) => setZap({ ...zap, district: e.target.value })} />
                             </form>
                         </div>
                         <pre></pre>
                         <div className="w-50 m-auto " >
                             <div className="d-flex justify-content-center align-items-center" >
-                                <button type="submit" className="btn btn-danger">Сделать поиск</button>
+                                <button type="submit" className="btn btn-danger">Найти</button>
                             </div>
                         </div>
                     </div>
-                    </form>
-                    <div className="row row-cols-1 row-cols-md-3 g-4 w-75 m-auto">
+                </form>
+                <div className="row row-cols-1 row-cols-md-3 g-4 w-75 m-auto">
                     {cards.map((item, index) => <Cards data={item} key={index} />)}
-                    </div>
-                    <div className="alert alert-danger w-50 asda mt-3 m-auto" style={{ "display": "none" }} role="alert" ref={blocks}></div>
-                    </div>
-                    <br/>
+                </div>
+                <div className="alert alert-danger w-50 asda mt-3 m-auto" style={{ "display": "none" }} role="alert" ref={blocks}></div>
+            </div>
+            <br />
             <Footer />
         </div>
     );

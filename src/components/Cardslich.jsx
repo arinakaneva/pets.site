@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Cardslich = (props) => {
-  
+
 
   function redact(e) {
     e.preventDefault();
@@ -64,7 +64,7 @@ const Cardslich = (props) => {
     <div>
 
       <div className="card h-100">
-        <img src={'https://pets.сделай.site'+props.data.photos} className="card-img-top wwww" alt="..." />
+        <img src={'https://pets.сделай.site' + props.data.photos} className="card-img-top wwww" style={{"height":"300px"}} alt="..." />
         <div className="card-body ft">
           <div>
             <div className="izmen">
@@ -78,13 +78,13 @@ const Cardslich = (props) => {
             <p className="card-text">Дата: {props.data.date}</p>
 
           </div>
-          <div className="izmen mt-3"><button type="button" onClick={() => dele(props.data.id)} className="btn btn-outline-danger">Удалить объявление</button> 
+          <div className="izmen mt-3"><button type="button" onClick={() => dele(props.data.id)} className="btn btn-outline-danger">Удалить объявление</button>
             <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target={"#exampleModal1" + props.data.id}>Изменить данные</button>
           </div>
         </div>
       </div>
 
-      <div className="modal fade" id={"exampleModal1"  + props.data.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id={"exampleModal1" + props.data.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -96,13 +96,13 @@ const Cardslich = (props) => {
                 <label htmlFor="inputKlic">Вид:</label>
                 <input name="kind" type="text" className="form-control" id="inputKlic" />
                 <br />
-                <label htmlFor="inputNai">Фото 1:</label>
+                <label htmlFor="inputNai">Фото 1: </label>
                 <input name='photos1' type="file" className="form-control-file ddd" id="exampleFormControlFile1" />
                 <br />
-                <label htmlFor="inputView">Фото 2:</label>
+                <label htmlFor="inputView">Фото 2: </label>
                 <input name='photos2' type="file" className="form-control-file ddd" id="exampleFormControlFile2" />
                 <br />
-                <label htmlFor="inputVie">Фото 3:</label>
+                <label htmlFor="inputVie">Фото 3: </label>
                 <input name='photos3' type="file" className="form-control-file ddd" id="exampleFormControlFile3" />
                 <br />
                 <label htmlFor="inputView">Клеймо:</label>
@@ -114,7 +114,7 @@ const Cardslich = (props) => {
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                  <button type="submit" className="btn btn-primary">Сохранить изменения</button>
+                  <button type="submit" className="btn btn-danger">Сохранить изменения</button>
                 </div>
               </form>
             </div>

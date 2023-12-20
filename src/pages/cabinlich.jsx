@@ -163,7 +163,7 @@ const ProfileP = () => {
                             <div className="col-lg-4">
                                 <div className="card mb-4">
                                     <div className="card-body text-center">
-                                        <img src={logg} alt="avatar" className="rounded-circle img-fluid" style={{ "width": "200px" }} />
+                                        <img src={logg} alt="avatar" className="rounded-circle img-fluid" style={{ "width": "250px" }} />
                                         <h5 className="my-3">{user.name}</h5>
                                     </div>
                                 </div>
@@ -213,7 +213,7 @@ const ProfileP = () => {
                                         <hr />
                                         <div className="row">
                                             <div className="col-sm-3">
-                                                <p className="mb-0">Кол-во дней на сайте:</p>
+                                                <p className="mb-0">Кол-во дней на сайте</p>
                                             </div>
                                             <div className="col-sm-9">
                                                 <p className="text-muted mb-0">{day}</p>
@@ -298,15 +298,10 @@ const ProfileP = () => {
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
                             </div>
                         </div>
                     </div>
                 </section>
-
             <h2 className="text-center text-white bg-danger m-2">Объявления пользователя</h2>
             <div className="row row-cols-1 row-cols-md-3 g-4 w-75 m-auto">
                     {cards.map((item, index) => <Cardslich data={item} key={index} />)}

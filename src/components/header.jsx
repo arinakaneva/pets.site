@@ -1,8 +1,47 @@
-import React from "react";
 import photo from '../img/logo.png'
 import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import QuickSearch from '../components/fastpoisk'
+
 
 const Header = () => {
+    let [card, setCard]=useState([]);
+
+let [query, setQuery]=useState('');
+
+const send=()=>{
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+
+    fetch("https://pets.сделай.site/api/search?query="+query, requestOptions)
+        .then(response => response.json())
+        .then(result => {console.log(result)
+
+
+            let data=result.data.orders.map((item)=>item.description)
+            let set=new Set(data)
+            let uniq=Array.from(set)
+
+            data=uniq.map((value, index)=><option value={value} key={value}></option>)
+
+
+            setCard(data)
+            console.log(card)
+        })
+
+
+
+        .catch(error => console.log('error', error));
+}
+
+const search = (e) => {
+    setQuery(e.target.value)
+
+    if (query.length>2) setTimeout(send, 1000);
+}
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,10 +70,7 @@ const Header = () => {
                                 <Link to={'/poisk'} className="nav-link">Поиск</Link>
                             </li>
                         </ul>
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-danger" type="submit">Search</button>
-                        </form>
+                        <QuickSearch/>
                     </div>
                 </div>
             </nav>
