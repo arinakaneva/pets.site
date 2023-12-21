@@ -213,7 +213,7 @@ const ProfileP = () => {
                                         <hr />
                                         <div className="row">
                                             <div className="col-sm-3">
-                                                <p className="mb-0">Кол-во дней на сайте</p>
+                                                <p className="mb-0">Дней на сайте</p>
                                             </div>
                                             <div className="col-sm-9">
                                                 <p className="text-muted mb-0">{day}</p>
@@ -259,15 +259,15 @@ const ProfileP = () => {
                                                     <div>
                                                         <input type="text" pattern='^[\d\+]{12}$' className="form-control" required onChange={(e) => setUser({ ...user, phone: e.target.value })} />
                                                         <div className="invalid-feedback">
-                                                            Введите номер телефона, используйте + и цифры
+                                                            Введите номер телефона, используя +7 и 10 чисел
                                                         </div>
                                                     </div>
                                                     <div className="modal-footer">
                                                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                                                        <button className="btn btn-primary" type="submit">Сохранить изменение</button>
+                                                        <button className="btn btn-danger" type="submit">Сохранить изменение</button>
                                                     </div>
                                                 </form>
-                                                <div className="alert alert-primary none" role="alert" ref={blocks}></div>
+                                                <div className="alert alert-danger none" role="alert" ref={blocks}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -290,10 +290,10 @@ const ProfileP = () => {
                                                     </div>
                                                     <div className="modal-footer">
                                                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                                                        <button className="btn btn-primary" type="submit">Сохранить изменение</button>
+                                                        <button className="btn btn-danger" type="submit">Сохранить изменение</button>
                                                     </div>
                                                 </form>
-                                                <div className="alert alert-primary none" role="alert" ref={block}></div>
+                                                <div className="alert alert-danger none" role="alert" ref={block}></div>
                                             </div>
                                         </div>
                                     </div>
